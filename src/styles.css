@@ -22,30 +22,116 @@ body,
   -webkit-tap-highlight-color: transparent;
 }
 
-.feature-placeholder {
-  padding: 6rem 1.5rem 2rem;
-  text-align: center;
+.flash-screen {
+  padding: 5rem 1rem 2rem;
+  max-width: 36rem;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
-.feature-placeholder h1 {
-  font-size: 1.6rem;
+.flash-header h1 {
   margin: 0;
+  font-size: 1.6rem;
   color: var(--mesh-accent);
 }
 
-.feature-placeholder p {
-  max-width: 32rem;
-  margin: 0;
-  opacity: 0.85;
-  line-height: 1.5;
+.flash-status {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  opacity: 0.65;
+  font-variant-numeric: tabular-nums;
 }
 
-.feature-status {
-  font-size: 0.85rem;
-  opacity: 0.6;
+.flash-name input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--mesh-fg);
+  font-size: 1rem;
+}
+
+.flash-conductor {
+  padding: 0.9rem 1rem;
+  border-radius: 0.7rem;
+  background: rgba(255, 234, 0, 0.08);
+  border: 1px solid rgba(255, 234, 0, 0.25);
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.flash-badge {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: var(--mesh-accent);
+  color: #111;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.flash-take {
+  padding: 1rem 1.2rem;
+  border-radius: 0.7rem;
+  border: 0;
+  background: var(--mesh-accent);
+  color: #111;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.flash-patterns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.flash-pattern {
+  padding: 0.9rem 0.4rem;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--mesh-fg);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+
+.flash-pattern[data-active="true"] {
+  background: var(--mesh-accent);
+  color: #111;
+  border-color: var(--mesh-accent);
+}
+
+.flash-current {
+  text-align: center;
+  font-size: 0.95rem;
+  opacity: 0.8;
   font-variant-numeric: tabular-nums;
+  padding: 0.4rem;
+}
+
+.flash-current[data-kind="strobe"] {
+  color: #ff5577;
+}
+
+.flash-surface {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity 60ms linear;
 }
