@@ -1,7 +1,7 @@
 # mesh-flash-mob
 
 [![pages](https://img.shields.io/badge/live-baditaflorin.github.io%2Fmesh-flash-mob-ffea00)](https://baditaflorin.github.io/mesh-flash-mob/)
-[![version](https://img.shields.io/badge/version-0.1.0-blue)](https://github.com/baditaflorin/mesh-flash-mob/blob/main/package.json)
+[![version](https://img.shields.io/badge/version-0.1.1-blue)](https://github.com/baditaflorin/mesh-flash-mob/blob/main/package.json)
 [![license](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 
 > Rotating conductor; all phones flash in sync. Concerts, raves, group photos.
