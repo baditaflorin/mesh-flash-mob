@@ -3,7 +3,6 @@ import {
   createClockSync,
   useCamera,
   useExpiringClaim,
-  useFairRng,
   useFlashlight,
   useNamedPeer,
   useRotatingTurn,
@@ -32,7 +31,6 @@ export function Feature({ room, config }: Props) {
 function Body({ room, config }: { room: YRoom; config: MeshConfig }) {
   const { name, setName, nameOf } = useNamedPeer(config, room);
   const clock = useMemo(() => createClockSync(room.provider), [room]);
-  useFairRng(room, "flash-salts");
   const conductor = useExpiringClaim(room, "conductor", 60_000);
   const rotating = useRotatingTurn(room, clock, { slotMs: 60_000, order: "shuffle" });
   const cam = useCamera({ armed: true, facing: "environment" });
